@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -352,6 +353,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <h1>Cross<span>fade</span>.fm</h1>
@@ -542,9 +544,11 @@
             const song1El = document.getElementById('song1Tags');
             const song2El = document.getElementById('song2Tags');
 
-            commonEl.innerHTML = tags.common.map(t => `<span class="tag common">${t}</span>`).join('');
-            song1El.innerHTML = tags.song1_unique.map(t => `<span class="tag">${t}</span>`).join('');
-            song2El.innerHTML = tags.song2_unique.map(t => `<span class="tag">${t}</span>`).join('');
+            const noDataMsg = '<span style="color:#555;font-size:0.8rem;">Not enough data yet — try a more established track</span>';
+
+            commonEl.innerHTML = tags.common.length ? tags.common.map(t => `<span class="tag common">${t}</span>`).join('') : noDataMsg;
+            song1El.innerHTML = tags.song1_unique.length ? tags.song1_unique.map(t => `<span class="tag">${t}</span>`).join('') : noDataMsg;
+            song2El.innerHTML = tags.song2_unique.length ? tags.song2_unique.map(t => `<span class="tag">${t}</span>`).join('') : noDataMsg;
 
             tagsSection.style.display = 'block';
         }
@@ -577,4 +581,5 @@
         setupSearch('search2', 'results2', 'selected2', 2);
     </script>
 </body>
+
 </html>
