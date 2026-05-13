@@ -49,3 +49,14 @@ You can get a free API key by creating an account at [last.fm/api](https://www.l
 
 - Works best with well established songs that have strong Last.fm community tag data
 - Newer releases may have limited vibe analysis due to fewer community tags
+
+## Preview
+
+### Landing Page
+![Crossfade.fm home](1.JPG)
+
+### Vibe Analysis
+![Crossfade.fm vibe analysis](2.JPG)
+
+### Generated Playlist
+![Crossfade.fm playlist](3.JPG)
